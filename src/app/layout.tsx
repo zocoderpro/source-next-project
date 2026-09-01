@@ -1,30 +1,11 @@
 import type { Metadata } from "next";
-import { Inter, Inter_Tight, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
-import { Providers } from "./providers";
 
-const interBody = Inter({
-    subsets: ["latin"],
-    weight: ["400", "500", "600"],
-    variable: "--font-body",
-});
-
-const interTightDisplay = Inter_Tight({
-    subsets: ["latin"],
-    weight: ["500", "600", "700", "800"],
-    variable: "--font-display",
-});
-
-const plexMono = IBM_Plex_Mono({
-    subsets: ["latin"],
-    weight: ["400", "500"],
-    variable: "--font-mono",
-});
 
 export const metadata: Metadata = {
-    title: "AthenaEvent — Transformez vos événements en intelligence",
+    title: "SOurce Next Project",
     description:
-        "AthenaEvent est la plateforme d'intelligence événementielle. Inscription, badges instantanés, capture de leads par QR, automatisation marketing et analytics en temps réel.",
+        "Description de l'application Source Next Project",
 };
 
 export default function RootLayout({
@@ -35,10 +16,10 @@ export default function RootLayout({
     return (
         <html
             lang="fr"
-            className={`${interBody.variable} ${interTightDisplay.variable} ${plexMono.variable} h-full antialiased`}
+            className=""
         >
             <body className="min-h-full flex flex-col">
-                <Providers>{children}</Providers>
+                {children}
             </body>
         </html>
     );
